@@ -1,0 +1,5 @@
+Adapted from https://github.com/carlosbaraza/old-ipad-photo-frame
+Commit: a7cec3229be1cd644e5f39e92adf6d6b80582edf
+License: MIT (LICENSE included).
+Original HTML/CSS adapted for bounded-memory slideshow and automatic album refresh.
+Node server replaced with Python 3.9 standard-library server and anonymous public CloudKit album cache.
