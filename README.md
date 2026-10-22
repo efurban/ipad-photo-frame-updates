@@ -10,6 +10,8 @@ App adaptation is MIT licensed; the original project is [carlosbaraza/old-ipad-p
 
 ## Current release
 
-`frame-ota-5` (sequence 5), published 2026-10-22: redesigned English/Chinese Settings with four sections, responsive landscape/portrait cards, and persistent save/back controls. Switching sections preserves unfinished edits. Update checks now show immediate progress, queued status and retry feedback; saving settings also shows a busy label. Local browser, persistence, playback and signed-package checks passed; installation on the iPad is awaiting verification.
+`frame-ota-6` (sequence 6), published 2026-10-22: fixes photos on the final screen remaining paired at the end of subsequent shuffled loops. The next loop mixes those photos back into the queue and tries to vary previous companions. Small albums and limited layout choices can still reuse combinations.
 
-Includes optional automatic updates from `frame-ota-4` (off by default; enable in App updates) and gentle CSS photo motion from `frame-ota-3`. Existing settings, signature verification and rollback are preserved.
+Also prevents duplicate references to the same cached photo/video from rewinding navigation into a short repeating section. Existing saved queues and cached manifests normalize those references, and media counts reflect distinct files. Tests cover complete playback loops, restored duplicate queues, album refreshes and sync, settings, server APIs and updater rollback. Two browser scenarios each completed ten loops with every unique photo shown once per loop. The signed package was verified locally; installation on the iPad is awaiting verification.
+
+Includes the bilingual Settings redesign and update progress feedback from `frame-ota-5`, optional automatic updates from `frame-ota-4` (off by default), and gentle CSS photo motion from `frame-ota-3`. Use **Shuffle order / 随机播放 → Yes / 是** for changing combinations.
