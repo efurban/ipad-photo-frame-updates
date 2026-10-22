@@ -10,4 +10,6 @@ App adaptation is MIT licensed; the original project is [carlosbaraza/old-ipad-p
 
 ## Current release
 
-`frame-ota-3` (sequence 3), published 2026-10-22: gentle CSS photo pan and zoom within fixed mosaic tiles, English/Chinese Off/Gentle controls, and reduced-motion support. Photos, video playback and saved settings remain compatible. Local browser and signed-updater checks passed; iPad motion performance is awaiting device verification.
+`frame-ota-4` (sequence 4), published 2026-10-22: optional automatic installation of verified updates. The English/Chinese switch is off by default and saves immediately. Install this release manually once, then enable **Automatic updates / 自动更新** for later releases. Updates wait for a media boundary or proceed with no recent browser; Settings edits, existing signature checks and rollback are preserved. Local API, browser and existing-supervisor integration checks passed; installation on the iPad is awaiting verification.
+
+Includes the gentle CSS photo motion introduced in `frame-ota-3`.
