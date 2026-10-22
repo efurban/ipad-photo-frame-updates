@@ -10,6 +10,6 @@ App adaptation is MIT licensed; the original project is [carlosbaraza/old-ipad-p
 
 ## Current release
 
-`frame-ota-4` (sequence 4), published 2026-10-22: optional automatic installation of verified updates. The English/Chinese switch is off by default and saves immediately. Install this release manually once, then enable **Automatic updates / 自动更新** for later releases. Updates wait for a media boundary or proceed with no recent browser; Settings edits, existing signature checks and rollback are preserved. Local API, browser and existing-supervisor integration checks passed; installation on the iPad is awaiting verification.
+`frame-ota-5` (sequence 5), published 2026-10-22: redesigned English/Chinese Settings with four sections, responsive landscape/portrait cards, and persistent save/back controls. Switching sections preserves unfinished edits. Update checks now show immediate progress, queued status and retry feedback; saving settings also shows a busy label. Local browser, persistence, playback and signed-package checks passed; installation on the iPad is awaiting verification.
 
-Includes the gentle CSS photo motion introduced in `frame-ota-3`.
+Includes optional automatic updates from `frame-ota-4` (off by default; enable in App updates) and gentle CSS photo motion from `frame-ota-3`. Existing settings, signature verification and rollback are preserved.
