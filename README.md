@@ -10,8 +10,8 @@ App adaptation is MIT licensed; the original project is [carlosbaraza/old-ipad-p
 
 ## Current release
 
-`frame-ota-6` (sequence 6), published 2026-10-22: fixes photos on the final screen remaining paired at the end of subsequent shuffled loops. The next loop mixes those photos back into the queue and tries to vary previous companions. Small albums and limited layout choices can still reuse combinations.
+`frame-ota-7` (sequence 7), published 2026-10-22: update checks can now show up to three short **What’s new / 更新内容** bullets beneath the version number. Notes follow the selected English/Chinese language and come from the installed updater’s verified local metadata cache. Current-version notes can also be viewed after a successful check. Releases without notes remain compatible.
 
-Also prevents duplicate references to the same cached photo/video from rewinding navigation into a short repeating section. Existing saved queues and cached manifests normalize those references, and media counts reflect distinct files. Tests cover complete playback loops, restored duplicate queues, album refreshes and sync, settings, server APIs and updater rollback. Two browser scenarios each completed ten loops with every unique photo shown once per loop. The signed package was verified locally; installation on the iPad is awaiting verification.
+Install this release once to enable notes for later updates. The existing updater, trust root and five-file app package are unchanged. Local bilingual UI, responsive browser, signed-metadata integration and all 19 updater tests passed; the signed package was verified locally. Installation on the iPad is awaiting verification.
 
-Includes the bilingual Settings redesign and update progress feedback from `frame-ota-5`, optional automatic updates from `frame-ota-4` (off by default), and gentle CSS photo motion from `frame-ota-3`. Use **Shuffle order / 随机播放 → Yes / 是** for changing combinations.
+Includes the shuffled-pairing and duplicate-playback fixes from `frame-ota-6`, the Settings redesign and progress feedback from `frame-ota-5`, optional automatic updates from `frame-ota-4`, and gentle photo motion from `frame-ota-3`.
