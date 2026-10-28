@@ -10,10 +10,10 @@ App adaptation is MIT licensed; the original project is [carlosbaraza/old-ipad-p
 
 ## Current release
 
-`frame-ota-9` (sequence 9), published 2026-10-23: the family iPad now receives its private health-report destination automatically, with no address to paste. A sealed default is unlocked by the existing private album configuration and saved locally. The package includes no plaintext reporting address, album token or management API key. Saved Off preferences and custom destinations remain unchanged.
+`frame-ota-10` (sequence 10), published 2026-10-28: shuffle rounds keep their history when a previously shown photo is removed and re-added, and older album responses cannot overwrite newer ones. This prevents two reproducible causes of early repeats during album changes.
 
-After installing, select **Start 24-hour check / 开始 24 小时检查** in Album & status. Applying the default does not start a recording or send a report. Other album configurations can still use manual setup.
+When shuffled photos are arranged together, the frame compares tiny in-memory previews of the loaded images. It defers extremely close matches to a later round so they don't appear together. Photos are never deleted. This is a conservative best-effort check: differently cropped matches can be missed, and extremely similar distinct photos may occasionally be deferred. It only compares images within the same set, so visually similar copies appearing separately can still repeat during a round.
 
-Standard Fernet interoperability, default provisioning, wrong-album/tamper rejection, saved preferences, private storage, graceful crypto failure, bilingual Settings and all 19 updater tests passed. The signed five-file app package matches source. Automatic setup and network connectivity on the actual iPad await device verification.
+Shuffle, actual display-path, album-change, face/layout and browser-canvas tests passed, including differently compressed copies. The signed five-file package was verified against source. The iPad was unavailable for device testing, so actual smoothness and recognition need confirmation there.
 
-Includes the 24-hour diagnostics, bounded local logs and optional private summary reports introduced in `frame-ota-8`, signed bilingual release notes from `frame-ota-7`, shuffled-playback fixes from `frame-ota-6`, Settings redesign and update progress from `frame-ota-5`, optional automatic updates from `frame-ota-4`, and gentle photo motion from `frame-ota-3`. The existing updater, trust root and five-file package format are unchanged.
+Includes the automatic private reporting defaults from `frame-ota-9`, 24-hour diagnostics from `frame-ota-8`, bilingual release notes from `frame-ota-7`, prior shuffled-playback fixes from `frame-ota-6`, Settings improvements from `frame-ota-5`, automatic updates from `frame-ota-4`, and photo motion from `frame-ota-3`. The existing updater, trust root and five-file package format are unchanged.
