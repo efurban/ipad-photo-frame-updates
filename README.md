@@ -10,10 +10,8 @@ App adaptation is MIT licensed; the original project is [carlosbaraza/old-ipad-p
 
 ## Current release
 
-`frame-ota-10` (sequence 10), published 2026-10-28: shuffle rounds keep their history when a previously shown photo is removed and re-added, and older album responses cannot overwrite newer ones. This prevents two reproducible causes of early repeats during album changes.
+`frame-ota-11` (sequence 11), published 2026-10-28: tap a photo in a mosaic to view it individually, fitted to the screen. The slideshow resumes after the configured interval or a second tap. The photo stays enlarged while fading to the next slide.
 
-When shuffled photos are arranged together, the frame compares tiny in-memory previews of the loaded images. It defers extremely close matches to a later round so they don't appear together. Photos are never deleted. This is a conservative best-effort check: differently cropped matches can be missed, and extremely similar distinct photos may occasionally be deferred. It only compares images within the same set, so visually similar copies appearing separately can still repeat during a round.
+Interaction tests cover touch selection, timers, rotation, swipes and transitions. The signed five-file package was verified against the source. The iPad was unavailable for device testing.
 
-Shuffle, actual display-path, album-change, face/layout and browser-canvas tests passed, including differently compressed copies. The signed five-file package was verified against source. The iPad was unavailable for device testing, so actual smoothness and recognition need confirmation there.
-
-Includes the automatic private reporting defaults from `frame-ota-9`, 24-hour diagnostics from `frame-ota-8`, bilingual release notes from `frame-ota-7`, prior shuffled-playback fixes from `frame-ota-6`, Settings improvements from `frame-ota-5`, automatic updates from `frame-ota-4`, and photo motion from `frame-ota-3`. The existing updater, trust root and five-file package format are unchanged.
+Includes shuffle and mosaic fixes from `frame-ota-10`, private reporting from `frame-ota-9`, diagnostics from `frame-ota-8`, bilingual release notes from `frame-ota-7`, Settings improvements, automatic updates and photo motion. The existing updater, trust root and five-file package format are unchanged.
