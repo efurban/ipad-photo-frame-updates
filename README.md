@@ -10,9 +10,11 @@ App adaptation is MIT licensed; the original project is [carlosbaraza/old-ipad-p
 
 ## Current release
 
-`frame-ota-12` (sequence 12), published 2026-10-29: tap the outer left/right edges to browse photo sets while taps elsewhere select an individual photo. Swipes follow the finger and animate in the chosen direction once the next media is ready. Deliberate slow drags work; short or cancelled drags settle back. Playback waits during touch so sets are not skipped, and stale gestures cannot affect a replacement slide.
+`frame-ota-13` (sequence 13), published 2026-10-29: the left edge goes backward even when a photo is enlarged. Back and forward restore the actual photo sets and their layouts rather than reconstructing different mosaics. Up to 100 recent sets are remembered in the current app session, without consuming the remaining shuffle queue. Photo drags reveal a ready neighboring preview, and directional transitions keep both frames opaque to avoid black gaps. If a preview is not ready, the current frame stays visible until the destination media is ready.
 
-Local browser regression tests cover edge taps, selection, long/short/cancelled swipes, timer holds, stale gestures, rapid consecutive drags, rotation and transition cleanup. The signed five-file package and source hashes were verified. Actual iPad performance remains unverified because the device is unavailable.
+Local browser regressions pass with shuffle on and off, covering exact back/back/forward/forward history, enlarged-photo navigation, neighboring-preview coverage, opaque swipe transitions, timers, cancellation, rotation and rapid consecutive gestures. Existing playback, mosaic deduplication and Settings regressions pass. The signed five-file package matches the source. Actual iPad performance has not yet been confirmed.
+
+Includes edge navigation and touch-pause behavior from `frame-ota-12`.
 
 Includes individual photo selection from `frame-ota-11`.
 
