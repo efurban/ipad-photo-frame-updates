@@ -10,9 +10,13 @@ App adaptation is MIT licensed; the original project is [carlosbaraza/old-ipad-p
 
 ## Current release
 
-`frame-ota-13` (sequence 13), published 2026-10-29: the left edge goes backward even when a photo is enlarged. Back and forward restore the actual photo sets and their layouts rather than reconstructing different mosaics. Up to 100 recent sets are remembered in the current app session, without consuming the remaining shuffle queue. Photo drags reveal a ready neighboring preview, and directional transitions keep both frames opaque to avoid black gaps. If a preview is not ready, the current frame stays visible until the destination media is ready.
+`frame-ota-14` (sequence 14), published 2026-10-29: prepare and reuse up to two neighboring photo previews (at most six photos in the app's preview cache), decode images ahead of time where supported, prime the page just left for quick reversals, and batch drag updates with requestAnimationFrame. Rotation replaces stale viewport previews. The photo download cache limit is unchanged.
 
-Local browser regressions pass with shuffle on and off, covering exact back/back/forward/forward history, enlarged-photo navigation, neighboring-preview coverage, opaque swipe transitions, timers, cancellation, rotation and rapid consecutive gestures. Existing playback, mosaic deduplication and Settings regressions pass. The signed five-file package matches the source. Actual iPad performance has not yet been confirmed.
+Pinch a photo to view it individually and zoom continuously from 1x to 4x. Drag with one finger to pan within the photo bounds; pinch inward to fit it again. Automatic playback waits until all fingers lift, then resumes with a full interval. Edge taps still navigate; changing sets clears the zoom. Gesture cancellation and rotation cannot accidentally advance the slideshow.
+
+Local browser regressions pass with shuffle on/off and with image.decode unavailable, covering preview reuse without new photo requests, bounded cache size, rotation, pinch/pan limits, finger handoff, cancellation, timer resume and zoom reset. Playback, mosaic comparison, Settings and bilingual release notes tests pass. The signed five-file package matches the source. Actual iPad smoothness has not yet been confirmed.
+
+Includes exact photo-set history and opaque swipe transitions from `frame-ota-13`.
 
 Includes edge navigation and touch-pause behavior from `frame-ota-12`.
 
