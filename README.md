@@ -10,8 +10,10 @@ App adaptation is MIT licensed; the original project is [carlosbaraza/old-ipad-p
 
 ## Current release
 
-`frame-ota-11` (sequence 11), published 2026-10-28: tap a photo in a mosaic to view it individually, fitted to the screen. The slideshow resumes after the configured interval or a second tap. The photo stays enlarged while fading to the next slide.
+`frame-ota-12` (sequence 12), published 2026-10-29: tap the outer left/right edges to browse photo sets while taps elsewhere select an individual photo. Swipes follow the finger and animate in the chosen direction once the next media is ready. Deliberate slow drags work; short or cancelled drags settle back. Playback waits during touch so sets are not skipped, and stale gestures cannot affect a replacement slide.
 
-Interaction tests cover touch selection, timers, rotation, swipes and transitions. The signed five-file package was verified against the source. The iPad was unavailable for device testing.
+Local browser regression tests cover edge taps, selection, long/short/cancelled swipes, timer holds, stale gestures, rapid consecutive drags, rotation and transition cleanup. The signed five-file package and source hashes were verified. Actual iPad performance remains unverified because the device is unavailable.
+
+Includes individual photo selection from `frame-ota-11`.
 
 Includes shuffle and mosaic fixes from `frame-ota-10`, private reporting from `frame-ota-9`, diagnostics from `frame-ota-8`, bilingual release notes from `frame-ota-7`, Settings improvements, automatic updates and photo motion. The existing updater, trust root and five-file package format are unchanged.
