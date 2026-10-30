@@ -10,11 +10,11 @@ App adaptation is MIT licensed; the original project is [carlosbaraza/old-ipad-p
 
 ## Current release
 
-`frame-ota-16` (sequence 16), published 2026-10-30: private background summaries report playback, album counts, sync, storage and completed loop timing. The first successful sync and changes to the album promptly trigger an updated summary. Storage scans happen outside the playback-reporting lock so slow disks cannot hold up client reports.
+`frame-ota-17` (sequence 17), published 2026-10-30: faster initial swipe feedback while neighboring media loads, earlier photo preview preparation, and small still-frame previews for recently played videos. Swiping back from the first slide settles correctly when no previous item exists.
 
-Reporting only runs when private Axiom configuration is provisioned separately on the device. Photos, album links, raw filenames and credentials are not included in the events or the update package. The latest navigation, cached swipes, pinch zoom and night clock remain included. Local browser, monitoring and diagnostics tests pass; the signed five-file package matches the source. Device validation follows installation.
+Local browser tests cover delayed real video playback, video frame capture, drag cancellation, screen coverage, exact back/forward navigation, pinch zoom, shuffle and old-Safari image decode fallback. Playback, shuffle and Axiom monitoring tests pass. The signed five-file package matches the tested source. Responsiveness on the physical iPad still needs confirmation after installation.
 
-Includes private health monitoring from `frame-ota-15`.
+Includes private Axiom health monitoring and prompt album summaries from `frame-ota-16`. Photos, album links, raw filenames and private reporting credentials are excluded from the package. Existing device data and the stable updater remain unchanged.
 
 Includes cached swipes and pinch-to-zoom from `frame-ota-14`.
 
