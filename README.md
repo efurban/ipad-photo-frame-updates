@@ -10,11 +10,11 @@ App adaptation is MIT licensed; the original project is [carlosbaraza/old-ipad-p
 
 ## Current release
 
-`frame-ota-14` (sequence 14), published 2026-10-29: prepare and reuse up to two neighboring photo previews (at most six photos in the app's preview cache), decode images ahead of time where supported, prime the page just left for quick reversals, and batch drag updates with requestAnimationFrame. Rotation replaces stale viewport previews. The photo download cache limit is unchanged.
+`frame-ota-15` (sequence 15), published 2026-10-30: adds private background operational summaries, including playback, album counts, sync, storage and completed loop timing. Reporting only runs when a private, separately provisioned Axiom configuration exists on the device. Photos, album links, raw filenames and credentials are not included in the events or the update package.
 
-Pinch a photo to view it individually and zoom continuously from 1x to 4x. Drag with one finger to pan within the photo bounds; pinch inward to fit it again. Automatic playback waits until all fingers lift, then resumes with a full interval. Edge taps still navigate; changing sets clears the zoom. Gesture cancellation and rotation cannot accidentally advance the slideshow.
+The latest slideshow improvements remain included: bounded swipe-preview caching, continuous pinch zoom and panning, photo-set history, bilingual settings and the night clock. Local browser, monitoring, diagnostics and updater tests passed; the signed five-file package matches the source. Device validation follows installation.
 
-Local browser regressions pass with shuffle on/off and with image.decode unavailable, covering preview reuse without new photo requests, bounded cache size, rotation, pinch/pan limits, finger handoff, cancellation, timer resume and zoom reset. Playback, mosaic comparison, Settings and bilingual release notes tests pass. The signed five-file package matches the source. Actual iPad smoothness has not yet been confirmed.
+Includes cached swipes and pinch-to-zoom from `frame-ota-14`.
 
 Includes exact photo-set history and opaque swipe transitions from `frame-ota-13`.
 
