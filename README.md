@@ -10,9 +10,11 @@ App adaptation is MIT licensed; the original project is [carlosbaraza/old-ipad-p
 
 ## Current release
 
-`frame-ota-15` (sequence 15), published 2026-10-30: adds private background operational summaries, including playback, album counts, sync, storage and completed loop timing. Reporting only runs when a private, separately provisioned Axiom configuration exists on the device. Photos, album links, raw filenames and credentials are not included in the events or the update package.
+`frame-ota-16` (sequence 16), published 2026-10-30: private background summaries report playback, album counts, sync, storage and completed loop timing. The first successful sync and changes to the album promptly trigger an updated summary. Storage scans happen outside the playback-reporting lock so slow disks cannot hold up client reports.
 
-The latest slideshow improvements remain included: bounded swipe-preview caching, continuous pinch zoom and panning, photo-set history, bilingual settings and the night clock. Local browser, monitoring, diagnostics and updater tests passed; the signed five-file package matches the source. Device validation follows installation.
+Reporting only runs when private Axiom configuration is provisioned separately on the device. Photos, album links, raw filenames and credentials are not included in the events or the update package. The latest navigation, cached swipes, pinch zoom and night clock remain included. Local browser, monitoring and diagnostics tests pass; the signed five-file package matches the source. Device validation follows installation.
+
+Includes private health monitoring from `frame-ota-15`.
 
 Includes cached swipes and pinch-to-zoom from `frame-ota-14`.
 
