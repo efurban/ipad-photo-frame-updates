@@ -10,11 +10,9 @@ App adaptation is MIT licensed; the original project is [carlosbaraza/old-ipad-p
 
 ## Current release
 
-`frame-ota-19` (sequence 19), published 2026-10-30: completed photo swipes transfer decoded preview images directly into the live slide. The zoom fallback introduced in frame-ota-17 is removed, and neighbor warming again waits until after the slide transition. A synchronous preview transfer does not leave a media-load watchdog armed against an already displayed photo.
+`frame-ota-20` (sequence 20), published 2026-10-30: the viewer uses a three-page strip for interruptible swipe motion and quick reversals. It preserves the existing album, shuffle history, media playback, settings, monitoring and signed update flow. A prepared previous photo can be restored while a video is starting.
 
-Local browser tests exercise repeated left/right reversals with shuffle enabled and disabled, old-Safari image decoding fallback, exact image-element reuse, preserved photo sets and queue state, pinch zoom, cancellation, rotation and video startup. The signed five-file package matches the tested source. Physical-device responsiveness still needs confirmation after installation.
-
-Includes completed video swipes during decoder startup from `frame-ota-18`.
+Targeted browser tests cover photo and video navigation, repeated reversals, interrupted slides, pinch, rotation and shuffle. The signed five-file package matches the tested source. Actual responsiveness on the original iPad still depends on its browser and device conditions.
 
 Includes private Axiom health monitoring and prompt album summaries from `frame-ota-16`. Photos, album links, raw filenames and private reporting credentials are excluded from the package. Existing device data and the stable updater remain unchanged.
 
